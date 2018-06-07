@@ -32,16 +32,21 @@ public class test_mysql_mybatis {
 		userbean.setUsername("gerry ge");
 		userbean.setPassword("123456");
 		userbean.setAccount(6224153425D);
+
 		try {
-			userMapper.insertUser(userbean);
-			userMapper.deleteUser(2);
+			UserBean userTemp = userMapper.selectUserById(16);
+			userTemp.setUsername("li xiao long");
+			sqlSession.update("org.gerry.mappers.UserMapper.updateUser",
+					userTemp);
+//			 userMapper.insertUser(userbean);
+			// userMapper.deleteUser(2);
+//			userMapper.deleteAll();
 			sqlSession.commit();
 			List<UserBean> userBeans = userMapper.selectAllUser();
 			for (UserBean user : userBeans) {
 				System.out.println(user.toString());
 			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			if (sqlSession != null) {

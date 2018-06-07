@@ -9,6 +9,8 @@
 <result property="url" column="url" javaType="java.lang.Double"/>
 </resultMap>
 
+<sql id="UserBean">id,username,password,account</sql>
+
 <insert id="insertUser" parameterType="UserBean" useGeneratedKeys="true" keyProperty="id"><!-- useGeneratedKeys="true" keyProperty="id" -->
  insert into userdb (username,password,account) values (#{username},#{password},#{account})
 </insert>
