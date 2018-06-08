@@ -38,6 +38,10 @@ public class test_mysql_mybatis {
 			for(PostBean post:posts){
 				System.out.println(post.getTitle());	
 			}
+			List<PostBean> postBeans= postMapper.selectPostByUserId(16);
+			for(PostBean post:postBeans){
+				System.out.println(post.getTitle()+"--"+post.getCreated());	
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

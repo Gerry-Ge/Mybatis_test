@@ -14,7 +14,7 @@
 		<id property="postId" column="post_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
 		<result property="title" column="title" javaType="String" jdbcType="VARCHAR"/>
 		<result property="content" column="content" javaType="String" />
-		<result property="created" column="created" javaType="java.sql.Date" />
+		<result property="created" column="created" javaType="java.sql.Date" jdbcType="TIMESTAMP"/>
 		</collection>
 	</resultMap>
 	<sql id="UserBean">id,username,password,account</sql>
