@@ -1,6 +1,7 @@
 package org.gerry.beans;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class UserBean implements Serializable {
 
@@ -32,6 +33,15 @@ public class UserBean implements Serializable {
 	private String username;
 	private String password;
 	private Double account;
+	private List<PostBean> posts;
+
+	public List<PostBean> getPosts() {
+		return posts;
+	}
+
+	public void setPosts(List<PostBean> posts) {
+		this.posts = posts;
+	}
 
 	public Integer getId() {
 		return id;

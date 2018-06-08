@@ -7,7 +7,9 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.gerry.beans.PostBean;
 import org.gerry.beans.UserBean;
+import org.gerry.mappers.PostMapper;
 import org.gerry.mappers.UserMapper;
 
 public class test_mysql_mybatis {
@@ -27,24 +29,14 @@ public class test_mysql_mybatis {
 	public static void main(String[] args) {
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-		UserBean userbean = new UserBean();
-		// userbean.setId(1);
-		userbean.setUsername("gerry ge");
-		userbean.setPassword("123456");
-		userbean.setAccount(6224153425D);
+		PostMapper postMapper = sqlSession.getMapper(PostMapper.class);
 
 		try {
-			UserBean userTemp = userMapper.selectUserById(16);
-			userTemp.setUsername("li xiao long");
-			sqlSession.update("org.gerry.mappers.UserMapper.updateUser",
-					userTemp);
-//			 userMapper.insertUser(userbean);
-			// userMapper.deleteUser(2);
-//			userMapper.deleteAll();
-			sqlSession.commit();
-			List<UserBean> userBeans = userMapper.selectAllUser();
-			for (UserBean user : userBeans) {
-				System.out.println(user.toString());
+			UserBean userBean=userMapper.selectUserPost(16);
+			System.out.println(userBean.getUsername());
+			List<PostBean> posts=userBean.getPosts();
+			for(PostBean post:posts){
+				System.out.println(post.getTitle());	
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.gerry.mappers.PostMapper">
+
+<resultMap type="org.gerry.beans.PostBean" id="post">
+<id property="postId" column="post_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+<result property="userid" column="userid" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+<result property="title" column="title" javaType="java.lang.String" jdbcType="VARCHAR"/>
+<result property="content" column="content" javaType="java.lang.String" jdbcType="VARCHAR"/>
+<result property="created" column="created" javaType="java.sql.Date" />
+</resultMap>
+
+<insert parameterType="org.gerry.beans.PostBean" id="insertPost">
+insert into post (userid,title,content,created) values (#{userid},#{title},#{content},#{created})
+</insert>
+
+<select id="selectPostByUserId" parameterType="java.lang.Integer" resultMap="post">
+select * from post where userid=#{userid}
+</select>
+</mapper>

@@ -33,9 +33,9 @@
 	</environments>
 
 	<mappers>
-		<!--<mapper resource="org/gerry/mappers/UserMapper.xml"/> -->
-		
-		 <mapper class="org.gerry.mappers.UserMapper"/> <!---->
+		<mapper resource="org/gerry/mappers/UserMapper.xml" /> 	<!---->
+		<mapper class="org.gerry.mappers.PostMapper" />
+		<!--<mapper class="org.gerry.mappers.UserMapper"/> -->
 		<!--<mapper resource="org/gerry/mappers" /> -->
 	</mappers>
 
