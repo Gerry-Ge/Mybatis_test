@@ -1,6 +1,7 @@
 package org.gerry.main;
 
 import java.io.Reader;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.ibatis.io.Resources;
@@ -42,6 +43,21 @@ public class test_mysql_mybatis {
 			for(PostBean post:postBeans){
 				System.out.println(post.getTitle()+"--"+post.getCreated());	
 			}
+			
+			UserBean userBeanTemp=new UserBean();
+			userBeanTemp.setUsername("ao tu man");
+			userBeanTemp.setPassword("123213");
+			userBeanTemp.setAccount(62135261567321D);
+			userMapper.insertUser(userBeanTemp);
+			
+			PostBean postBean=new PostBean();
+			postBean.setTitle("ao title");
+			postBean.setUserid(userBeanTemp.getId());
+//			postBean.setUserBean(userBeanTemp);
+			postBean.setCreated(new Date());
+			postBean.setContent("ao content");
+			postMapper.insertPost(postBean);
+			sqlSession.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

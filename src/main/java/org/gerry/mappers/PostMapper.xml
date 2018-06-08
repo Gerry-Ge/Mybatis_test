@@ -8,6 +8,8 @@
 <result property="title" column="title" javaType="java.lang.String" jdbcType="VARCHAR"/>
 <result property="content" column="content" javaType="java.lang.String" jdbcType="VARCHAR"/>
 <result property="created" column="created" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+<!-- 多对一  多的一方 通过association在多的一方 配置一的一方  resultMap为UserMapper.xml的namespace+resultMapId -->
+<association property="userBean" resultMap="org.gerry.mappers.UserMapper.userMap"/>
 </resultMap>
 
 <insert parameterType="org.gerry.beans.PostBean" id="insertPost">
