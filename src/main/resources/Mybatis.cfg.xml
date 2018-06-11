@@ -35,6 +35,8 @@
 	<mappers>
 		<mapper resource="org/gerry/mappers/UserMapper.xml" /> 	<!---->
 		<mapper resource="org/gerry/mappers/PostMapper.xml" />
+		<mapper resource="org/gerry/mappers/TeacherMapper.xml" />
+		<mapper resource="org/gerry/mappers/TeacherUserMapper.xml" />
 		<!-- <mapper class="org.gerry.mappers.PostMapper" />  -->
 		<!--<mapper class="org.gerry.mappers.UserMapper"/> -->
 		<!--<mapper resource="org/gerry/mappers" /> -->

@@ -34,6 +34,15 @@ public class UserBean implements Serializable {
 	private String password;
 	private Double account;
 	private List<PostBean> posts;
+	private List<TeacherBean> teachers;
+
+	public List<TeacherBean> getTeachers() {
+		return teachers;
+	}
+
+	public void setTeachers(List<TeacherBean> teachers) {
+		this.teachers = teachers;
+	}
 
 	public List<PostBean> getPosts() {
 		return posts;

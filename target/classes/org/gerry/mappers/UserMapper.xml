@@ -25,6 +25,8 @@
 		<result property="account" column="account" javaType="java.lang.Double" />
 		<!-- 一对多  通过resultMap在一的一方配置多的一方   postMapper.xml的namespace+resultMapID-->
 		<collection property="posts" resultMap="org.gerry.mappers.PostMapper.post"/>
+		<collection property="teachers" resultMap="org.gerry.mappers.TeacherMapper.teacher"/> 
+		<!-- column="id" select="org.gerry.mapper.TeacherUserMapper.selectTeachersByUser"/> -->
 	</resultMap>
 	
 	
@@ -60,5 +62,13 @@
 		select  u.*,p.* from userdb u left join  post p on  u.id=p.userid
 		where u.id=#{id}
 	</select>
+	
+	<select id="selectUserTeacher" resultMap="userPostCollcetionMap" parameterType="int">
+		select  u.*,t.* from userdb u left join teacheruser p on  u.id=p.userid
+		left join teacher t on p.teacher_id=t.teacher_id
+		where u.id=#{id}
+	</select>
+	
+	
 </mapper>
 

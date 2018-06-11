@@ -28,5 +28,7 @@ public interface UserMapper extends Serializable {
 	public void deleteAll() throws Exception;
 	
 	public UserBean selectUserPost(int id) throws Exception;
+	
+	public UserBean selectUserTeacher(int id) throws Exception; 
 
 }
