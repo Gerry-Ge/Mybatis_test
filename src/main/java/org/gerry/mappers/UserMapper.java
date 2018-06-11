@@ -30,5 +30,7 @@ public interface UserMapper extends Serializable {
 	public UserBean selectUserPost(int id) throws Exception;
 	
 	public UserBean selectUserTeacher(int id) throws Exception; 
-
+	
+	public UserBean selectUserPostTeacher(int id) throws Exception; 
+	
 }

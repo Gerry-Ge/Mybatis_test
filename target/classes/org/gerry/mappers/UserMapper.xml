@@ -9,27 +9,33 @@
 		<result property="account" column="account" javaType="java.lang.Double" />
 	</resultMap>
 
-	<resultMap id="userPostExtendsMap" type="org.gerry.beans.UserBean" extends="userMap">
-		<collection property="posts" javaType="ArrayList" column="userid" ofType="org.gerry.beans.PostBean" >
-		<id property="postId" column="post_id" javaType="java.lang.Integer" jdbcType="INTEGER"/>
-		<result property="title" column="title" javaType="String" jdbcType="VARCHAR"/>
-		<result property="content" column="content" javaType="String" />
-		<result property="created" column="created" javaType="java.sql.Date" jdbcType="TIMESTAMP"/>
+	<resultMap id="userPostExtendsMap" type="org.gerry.beans.UserBean"
+		extends="userMap">
+		<collection property="posts" javaType="ArrayList" column="userid"
+			ofType="org.gerry.beans.PostBean">
+			<id property="postId" column="post_id" javaType="java.lang.Integer"
+				jdbcType="INTEGER" />
+			<result property="title" column="title" javaType="String"
+				jdbcType="VARCHAR" />
+			<result property="content" column="content" javaType="String" />
+			<result property="created" column="created" javaType="java.sql.Date"
+				jdbcType="TIMESTAMP" />
 		</collection>
 	</resultMap>
-	
+
 	<resultMap id="userPostCollcetionMap" type="org.gerry.beans.UserBean">
 		<id property="id" column="id" jdbcType="INTEGER" />
 		<result property="username" column="username" javaType="java.lang.String" />
 		<result property="password" column="password" javaType="java.lang.String" />
 		<result property="account" column="account" javaType="java.lang.Double" />
-		<!-- 一对多  通过resultMap在一的一方配置多的一方   postMapper.xml的namespace+resultMapID-->
-		<collection property="posts" resultMap="org.gerry.mappers.PostMapper.post"/>
-		<collection property="teachers" resultMap="org.gerry.mappers.TeacherMapper.teacher"/> 
+		<!-- 一对多 通过resultMap在一的一方配置多的一方 postMapper.xml的namespace+resultMapID -->
+		<collection property="posts" resultMap="org.gerry.mappers.PostMapper.post" />
+		<collection property="teachers"
+			resultMap="org.gerry.mappers.TeacherMapper.teacher" />
 		<!-- column="id" select="org.gerry.mapper.TeacherUserMapper.selectTeachersByUser"/> -->
 	</resultMap>
-	
-	
+
+
 	<sql id="UserBean">id,username,password,account</sql>
 
 	<insert id="insertUser" parameterType="UserBean"
@@ -57,18 +63,31 @@
 	<select id="selectAllUser" resultMap="userMap">
 		select * from userdb
 	</select>
-	
-	<select id="selectUserPost" resultMap="userPostCollcetionMap" parameterType="int">
-		select  u.*,p.* from userdb u left join  post p on  u.id=p.userid
+
+	<select id="selectUserPost" resultMap="userPostCollcetionMap"
+		parameterType="int">
+		select u.*,p.* from userdb u left join post p on
+		u.id=p.userid
 		where u.id=#{id}
 	</select>
-	
-	<select id="selectUserTeacher" resultMap="userPostCollcetionMap" parameterType="int">
-		select  u.*,t.* from userdb u left join teacheruser p on  u.id=p.userid
+
+	<select id="selectUserTeacher" resultMap="userPostCollcetionMap"
+		parameterType="int">
+		select u.*,t.* from userdb u left join teacheruser p on
+		u.id=p.userid
+		left join teacher t on p.teacher_id=t.teacher_id
+		where
+		u.id=#{id}
+	</select>
+
+	<select id="selectUserPostTeacher" resultMap="userPostCollcetionMap"
+		parameterType="int">
+		select u.*,t.*,s.* from
+		userdb u left join teacheruser p on u.id=p.userid
+		left join post s on
+		s.userid=u.id
 		left join teacher t on p.teacher_id=t.teacher_id
 		where u.id=#{id}
 	</select>
-	
-	
 </mapper>
 

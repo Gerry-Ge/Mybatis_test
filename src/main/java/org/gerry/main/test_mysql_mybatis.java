@@ -7,6 +7,7 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.gerry.beans.PostBean;
 import org.gerry.beans.TeacherBean;
 import org.gerry.beans.TeacherUserBean;
 import org.gerry.beans.UserBean;
@@ -44,13 +45,24 @@ public class test_mysql_mybatis {
 			UserBean userBeanTemp=userMapper.selectUserTeacher(16);
 			List<TeacherBean>  teacherList=userBeanTemp.getTeachers();
 			for(TeacherBean t:teacherList){
-				System.out.println(t.toString());
+//				System.out.println(t.toString());
 			}
-			teacherUserMapper.deleteTeacherUser(2,16);
-			System.out.println("delete");
+//			teacherUserMapper.deleteTeacherUser(2,16);
+//			System.out.println("delete");
+			
 			teacherList=userBeanTemp.getTeachers();
 			for(TeacherBean t:teacherList){
-				System.out.println(t.toString());
+//				System.out.println(t.toString());
+			}
+			
+			userBeanTemp=userMapper.selectUserPostTeacher(17);
+			List<TeacherBean> TeacherBeans= userBeanTemp.getTeachers();
+			for(TeacherBean teacher:TeacherBeans){
+				System.out.println(teacher.toString());
+			}
+			List<PostBean> postBeans= userBeanTemp.getPosts();
+			for(PostBean post:postBeans){
+				System.out.println(post.toString());
 			}
 			sqlSession.commit();
 						
