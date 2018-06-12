@@ -11,6 +11,7 @@
 		<package name="org.gerry.beans" />
 	</typeAliases>
 
+<!-- 整合spring框架 将DataSource 交给Spring 管理
 	<environments default="MySql_1">
 		<environment id="MySql_1">
 			<transactionManager type="JDBC" />
@@ -31,7 +32,7 @@
 			</dataSource>
 		</environment>
 	</environments>
-
+ -->
 	<mappers>
 		<mapper resource="org/gerry/mappers/UserMapper.xml" /> 	<!---->
 		<mapper resource="org/gerry/mappers/PostMapper.xml" />
