@@ -17,6 +17,9 @@
 		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"></bean>
 
 	<context:component-scan base-package="org.gerry.*" />
+	
+	<!-- 每次请求过来，先经过DefaultServletHttpRequestHandler判断是否是静态文件，如果是静态文件，
+	则进行处理，不是则放行交由DispatcherServlet控制器处理。  -->
 	<mvc:default-servlet-handler />
 
 	<bean
@@ -25,13 +28,28 @@
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 
-
-	<bean id="propertyFileConfigForDB"
+	<!-- 引入配置文件 方法一-->
+	<!-- --><bean id="test"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="location">
+		<property name="locations">
+		<list>
 			<value>classpath:Mybatis.properties</value>
+		</list>		
 		</property>
-	</bean>
+	</bean> 
+	
+	<!-- 引入配置文件 方法二
+	<context:property-placeholder location="classpath:Mybatis.properties"/> -->
+	
+	
+	<!-- java代码中引入properties文件内容配置 -->
+	<bean id="prop" class="org.springframework.beans.factory.config.PropertiesFactoryBean">  
+    <property name="locations">  
+        <array>  
+            <value>classpath:Mybatis1.properties</value>  
+        </array>  
+    </property>  
+	</bean> 
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="${jdbc.driver}"></property>
@@ -49,7 +67,10 @@
 
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
+		<!-- 用于指定Mybatis的配置文件位置。如果指定了该属性，那么会以该配置文件的内容作为
+		配置信息构建对应的SqlSessionFactoryBuilder，但是后续属性指定的内容会覆盖该配置文件里面指定的对应内容 -->
 		<property name="configLocation" value="classpath:Mybatis.cfg.xml" />
+		  <!-- 指定sql映射xml文件的路径 -->
 		<property name="mapperLocations" value="classpath*:org/gerry/mappers/*.xml" />
 	</bean>
 
@@ -57,10 +78,10 @@
 		<property name="basePackage" value="org.gerry.mappers" />
 	</bean>
 
-	<bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+	<!-- <bean id="userMapper1" class="org.mybatis.spring.mapper.MapperFactoryBean">
 		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 		<property name="mapperInterface" value="org.gerry.mappers.UserMapper" />
-	</bean>
-
+	</bean> -->
+	
 </beans>
 	

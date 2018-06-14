@@ -44,4 +44,11 @@
 		<mapper resource="org/gerry/mappers" />
 	</mappers>
  -->
+ 
+ <plugins>
+    <plugin interceptor="org.gerry.mybatisPagePlugin.PagePlugin">
+        <property name="dialect" value="mysql"/>
+        <property name="pageSqlId" value="(.*)UserMapper(.*)" />
+    </plugin>
+</plugins>
 </configuration>

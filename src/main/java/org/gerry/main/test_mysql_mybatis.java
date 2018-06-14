@@ -31,47 +31,47 @@ public class test_mysql_mybatis {
 	}
 
 	public static void main(String[] args) {
-		SqlSession sqlSession = sqlSessionFactory.openSession();
-		UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-		PostMapper postMapper = sqlSession.getMapper(PostMapper.class);
-		TeacherMapper teacherMapper= sqlSession.getMapper(TeacherMapper.class);
-		TeacherUserMapper teacherUserMapper=sqlSession.getMapper(TeacherUserMapper.class);
+//		SqlSession sqlSession = sqlSessionFactory.openSession();
+//		UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+//		PostMapper postMapper = sqlSession.getMapper(PostMapper.class);
+//		TeacherMapper teacherMapper= sqlSession.getMapper(TeacherMapper.class);
+//		TeacherUserMapper teacherUserMapper=sqlSession.getMapper(TeacherUserMapper.class);
 		try {
 //			TeacherUserBean teacherUserBean=new TeacherUserBean();
 //			teacherUserBean.setTeacherId(2);
 //			teacherUserBean.setUserId(16);
 //			teacherUserMapper.insertTeacherUser(teacherUserBean);
 			
-			UserBean userBeanTemp=userMapper.selectUserTeacher(16);
-			List<TeacherBean>  teacherList=userBeanTemp.getTeachers();
-			for(TeacherBean t:teacherList){
+//			UserBean userBeanTemp=userMapper.selectUserTeacher(16);
+//			List<TeacherBean>  teacherList=userBeanTemp.getTeachers();
+//			for(TeacherBean t:teacherList){
 //				System.out.println(t.toString());
-			}
+//			}
 //			teacherUserMapper.deleteTeacherUser(2,16);
 //			System.out.println("delete");
 			
-			teacherList=userBeanTemp.getTeachers();
-			for(TeacherBean t:teacherList){
+//			teacherList=userBeanTemp.getTeachers();
+//			for(TeacherBean t:teacherList){
 //				System.out.println(t.toString());
-			}
+//			}
 			
-			userBeanTemp=userMapper.selectUserPostTeacher(17);
-			List<TeacherBean> TeacherBeans= userBeanTemp.getTeachers();
-			for(TeacherBean teacher:TeacherBeans){
-				System.out.println(teacher.toString());
-			}
-			List<PostBean> postBeans= userBeanTemp.getPosts();
-			for(PostBean post:postBeans){
-				System.out.println(post.toString());
-			}
-			sqlSession.commit();
+//			userBeanTemp=userMapper.selectUserPostTeacher(17);
+//			List<TeacherBean> TeacherBeans= userBeanTemp.getTeachers();
+//			for(TeacherBean teacher:TeacherBeans){
+//				System.out.println(teacher.toString());
+//			}
+//			List<PostBean> postBeans= userBeanTemp.getPosts();
+//			for(PostBean post:postBeans){
+//				System.out.println(post.toString());
+//			}
+//			sqlSession.commit();
 						
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			if (sqlSession != null) {
-				sqlSession.close();
-			}
+//			if (sqlSession != null) {
+//				sqlSession.close();
+//			}
 		}
 
 	}

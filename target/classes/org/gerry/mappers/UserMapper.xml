@@ -89,5 +89,9 @@
 		left join teacher t on p.teacher_id=t.teacher_id
 		where u.id=#{id}
 	</select>
+	
+	<select id="getUserListPage" resultType="UserBean">
+	select * from userdb
+	</select>
 </mapper>
 

@@ -11,6 +11,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<p>${DBUrl}</p>
 <c:forEach items="${Users}" var="user" varStatus="status">
 ${user.username},${user.password},${status.index}</br>
 </c:forEach>
