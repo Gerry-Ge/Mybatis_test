@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active:dev
+
+mybatis:
+  typeAliasesPackage:com.xdd.entity
+  mapperLocations:classpath:mapper/*.xml
+
+spring:
+  profiles:dev
+  datasource:
+    url:jdbc:mysql://localhost:3306/test
+    username:root
+    password:root
+    driver-class-name: com.mysql.jdbc.Driver

@@ -4,7 +4,8 @@ import org.gerry.beans.UserBean;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserDao extends JpaRepository<UserBean,Integer> {
+// extends JpaRepository<UserBean,Integer>
+public interface UserDao {
 
 	UserBean findById(int id);
 }
