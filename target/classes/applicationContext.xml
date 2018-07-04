@@ -11,7 +11,7 @@
 	<bean id="propertyFileConfigForDB"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="location">
-			<value>Mybatis.properties</value>
+			<value>classpath:Mybatis.properties</value>
 		</property>
 	</bean>
 
@@ -41,13 +41,17 @@
 										
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 	<property name="dataSource" ref="dataSource"/>
-	<property name="configLocation" value="Mybatis.cfg.xml"/>
+	<property name="configLocation" value="classpath:Mybatis.cfg.xml"/>
 	</bean>
 	
 	<bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
 	<property name="sqlSessionFactory" ref="sqlSessionFactory"/>
 	<property name="mapperInterface" value="org.gerry.mappers.UserMapper"/>
 	</bean>
+	
+	<context:component-scan base-package="org.gerry.services.*">
+	<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
 	
 	</beans>
 	

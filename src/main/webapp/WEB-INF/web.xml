@@ -2,6 +2,11 @@
 	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd "
 	version="2.4">
+	
+	<welcome-file-list>
+	<welcome-file>index.jsp</welcome-file>
+	<welcome-file>/WEB-INF/view/HibernateWeb.jsp</welcome-file>
+	</welcome-file-list>
 	<!-- jsp页面无法使用C标签的EL表达式解决方法二 替换web.xml的报文头 -->
 	<display-name>Archetype Created Web Application</display-name>
 
@@ -19,6 +24,5 @@
 		<servlet-name>springMVC</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-
-
+	
 </web-app>

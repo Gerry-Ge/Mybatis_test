@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC  
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+	<!--<property name="hibernate.connection.driver_class">${jdbc.driver}</property>
+		<property name="hibernate.connection.url">${jdbc.url}</property>
+		<property name="hibernate.connection.username">${jdbc.username}</property>
+		<property name="hibernate.connection.password">${jdbc.password}</property>
+		<property name="hibernate.dialect">${jdbc.dialect}</property>
+		<property name="hibernate.show_sql">true</property>  	
+		<property name="hibernate.default_catalog">${jdbc.catalog}</property>
+		<property name="hibernate.default_schema">${jdbc.schema}</property>
+		 -->
+		 <!-- 传统配置文件*.hbm.xml
+		<mapping resource="org/gerry/hibernateXmls/TestListString.hbm.xml"></mapping> -->
+		<!-- 通过注解加载 无需配置表对应的XML文件 -->
+		<mapping class="org.gerry.hibernate.annotation.one2one.beans.IdCard"></mapping>
+		<mapping class="org.gerry.hibernate.annotation.one2one.beans.Person"></mapping>
+		
+	</session-factory>
+</hibernate-configuration>
