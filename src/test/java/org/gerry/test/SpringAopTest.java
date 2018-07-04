@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @ContextConfiguration({"classpath:applicationContext.xml"})
 @SpringBootTest
-//@TestExecutionListeners()
+@TestExecutionListeners()
 public class SpringAopTest {
 	
 	@Autowired
