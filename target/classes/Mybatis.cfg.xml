@@ -11,22 +11,38 @@
 		<package name="org.gerry.beans" />
 	</typeAliases>
 
-	<!-- 整合spring框架 将DataSource 交给Spring 管理 <environments default="MySql_1"> 
-		<environment id="MySql_1"> <transactionManager type="JDBC" /> <dataSource 
-		type="POOLED"> <property name="driver" value="${jdbc.driver}" /> <property 
-		name="url" value="${jdbc.url}" /> <property name="username" value="${jdbc.username}" 
-		/> <property name="password" value="${jdbc.password}" /> </dataSource> </environment> 
-		<environment id="MySql_2"> <transactionManager type="JDBC" /> <dataSource 
-		type="POOLED"> <property name="driver" value="${jdbc.driver}" /> <property 
-		name="url" value="${jdbc2.url}" /> <property name="username" value="${jdbc.username}" 
-		/> <property name="password" value="${jdbc.password}" /> </dataSource> </environment> 
-		</environments> -->
+	<!-- 整合spring框架 将DataSource 交给Spring 管理 -->
+	<environments default="MySql_1">
+		<environment id="MySql_1">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${jdbc.driver}" />
+				<property name="url" value="${jdbc.url}" />
+				<property name="username" value="${jdbc.username}" />
+				<property name="password" value="${jdbc.password}" />
+			</dataSource>
+		</environment>
+		<environment id="MySql_2">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${jdbc.driver}" />
+				<property name="url" value="${jdbc2.url}" />
+				<property name="username" value="${jdbc.username}" />
+				<property name="password" value="${jdbc.password}" />
+			</dataSource>
+		</environment>
+	</environments>
 
-	<!-- <mappers> <mapper resource="org/gerry/mappers/UserMapper.xml" /> <mapper 
-		resource="org/gerry/mappers/PostMapper.xml" /> <mapper resource="org/gerry/mappers/TeacherMapper.xml" 
-		/> <mapper resource="org/gerry/mappers/TeacherUserMapper.xml" /> <mapper 
-		class="org.gerry.mappers.PostMapper" /> <mapper class="org.gerry.mappers.UserMapper"/> 
-		<mapper resource="org/gerry/mappers" /> </mappers> -->
+	<!-- -->
+	<mappers>
+		<mapper resource="org/gerry/mappers/UserMapper.xml" />
+		<mapper resource="org/gerry/mappers/PostMapper.xml" />
+		<mapper resource="org/gerry/mappers/TeacherMapper.xml" />
+		<mapper resource="org/gerry/mappers/TeacherUserMapper.xml" />
+		<mapper class="org.gerry.mappers.PostMapper" />
+		<mapper class="org.gerry.mappers.UserMapper" />
+		<mapper resource="org/gerry/mappers" />
+	</mappers>
 
 	<plugins>
 		<plugin interceptor="org.gerry.mybatisPagePlugin.PagePlugin">
