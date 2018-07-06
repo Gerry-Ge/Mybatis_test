@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 import org.gerry.beans.UserBean;
 import org.gerry.mybatisPagePlugin.Page;
 
@@ -20,7 +21,7 @@ public interface UserMapper extends Serializable {
 	// @Delete("delete from userdb where id=#{id}")
 	public int deleteUser(int id) throws Exception;
 
-	// @Select("select * from userdb where id=#{id}")
+//	 @Select("select * from userdb where id=#{id}")
 	public UserBean selectUserById(int id) throws Exception;
 
 	// @Select("select * from userdb ")
