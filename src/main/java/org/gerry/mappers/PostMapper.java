@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.mappers;
 
 import java.util.List;
@@ -26,4 +25,3 @@ public interface PostMapper {
 	
 	public List<PostBean> selectPostByUserId(int userid) throws Exception;
 }
->>>>>>> 20180829 commit;

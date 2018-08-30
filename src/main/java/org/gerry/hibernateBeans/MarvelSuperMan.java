@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.hibernateBeans;
 
 import javax.persistence.*;
@@ -36,4 +35,3 @@ public class MarvelSuperMan extends Superman{
 		this.nation = nation;
 	}
 }
->>>>>>> 20180829 commit;

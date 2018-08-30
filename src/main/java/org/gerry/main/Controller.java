@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.main;
 
 import java.util.List;
@@ -170,4 +169,3 @@ public class Controller {
 		return mav;
 	}
 }
->>>>>>> 20180829 commit;

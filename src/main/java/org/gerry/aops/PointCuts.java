@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.aops;
 
 import org.aspectj.lang.annotation.Aspect;
@@ -40,4 +39,3 @@ public class PointCuts {
 	}
 
 }
->>>>>>> 20180829 commit;

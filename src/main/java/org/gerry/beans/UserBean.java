@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.beans;
 
 import java.io.Serializable;
@@ -186,4 +185,3 @@ public class UserBean implements Serializable {
 	}
 
 }
->>>>>>> 20180829 commit;

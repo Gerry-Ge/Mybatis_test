@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.springboot.dao;
 
 import org.gerry.beans.UserBean;
@@ -22,4 +21,3 @@ public interface UserDao {
 
 	UserBean findById(int id);
 }
->>>>>>> 20180829 commit;

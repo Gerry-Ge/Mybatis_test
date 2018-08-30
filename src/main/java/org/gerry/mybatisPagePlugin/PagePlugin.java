@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.mybatisPagePlugin;
 
 import java.lang.reflect.Field;
@@ -434,5 +433,4 @@ public class PagePlugin implements Interceptor {
 		}
 	}
 
->>>>>>> 20180829 commit;
 }

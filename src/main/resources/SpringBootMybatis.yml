@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 spring:
   profiles:
     active:dev
@@ -13,20 +12,5 @@ spring:
     url:jdbc:mysql://localhost:3306/test
     username:root
     password:root
-=======
-spring:
-  profiles:
-    active:dev
 
-mybatis:
-  typeAliasesPackage:com.xdd.entity
-  mapperLocations:classpath:mapper/*.xml
-
-spring:
-  profiles:dev
-  datasource:
-    url:jdbc:mysql://localhost:3306/test
-    username:root
-    password:root
->>>>>>> 20180829 commit;
     driver-class-name: com.mysql.jdbc.Driver

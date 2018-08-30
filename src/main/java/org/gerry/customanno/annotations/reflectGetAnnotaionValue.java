@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.customanno.annotations;
 
 import java.lang.annotation.Annotation;
@@ -44,4 +43,3 @@ public class reflectGetAnnotaionValue {
 
 	}
 }
->>>>>>> 20180829 commit;

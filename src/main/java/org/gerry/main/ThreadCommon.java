@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.main;
 
 import java.util.Date;
@@ -52,4 +51,3 @@ public class ThreadCommon extends Thread {
 		}
 	}
 }
->>>>>>> 20180829 commit;

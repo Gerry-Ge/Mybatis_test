@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.mybatisPagePlugin;
 
 import java.lang.reflect.Field;
@@ -130,4 +129,3 @@ public class ReflectHelper {
 	}
 
 }
->>>>>>> 20180829 commit;

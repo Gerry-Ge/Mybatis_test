@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.hibernate.annotation.one2one.beans;
 
 import javax.persistence.*;
@@ -76,4 +75,3 @@ public class Reference {
 	}
 
 }
->>>>>>> 20180829 commit;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC
           "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
@@ -27,34 +26,4 @@
 		</id>
 		<property name="staffName" />
 	</class>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-mapping PUBLIC
-          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<hibernate-mapping>
-	<class name="org.gerry.hibernateBeans.Depertment" table="HDepertment">
-		<id name="deptId">
-			<generator class="native" />
-		</id>
-		<property name="deptName" />
-		<list name="employee" table="HEmployees">
-			<key column="deptIdx" />
-			<index column="deX" />
-			<element column="employeeName" type="string" />
-		</list>
-		<list name="staffs" table="HStaff" cascade="save-update,delete">
-			<key column="deptId" />
-			<index column="type" />
-			<one-to-many class="org.gerry.hibernateBeans.Staff" />
-		</list>
-	</class>
-
-	<class name="org.gerry.hibernateBeans.Staff">
-		<id name="staffId">
-			<generator class="native" />
-		</id>
-		<property name="staffName" />
-	</class>
->>>>>>> 20180829 commit;
 </hibernate-mapping>          

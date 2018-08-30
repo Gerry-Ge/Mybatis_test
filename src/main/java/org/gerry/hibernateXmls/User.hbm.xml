@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
@@ -9,36 +8,14 @@
 			<column name="id" />
 			<generator class="native"></generator>
 		</id>
-		<property name="username" >
+		<property name="username">
 			<column name="username" length="20" not-null="false" />
 		</property>
-		<property name="password" >
+		<property name="password">
 			<column name="password" length="20" not-null="false" />
 		</property>
 		<property name="account">
 			<column name="account" not-null="false" />
 		</property>
 	</class>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-
-<hibernate-mapping>
-	<class name="org.gerry.beans.UserBean" table="userdb">
-		<id name="id" type="java.lang.Integer">
-			<column name="id" />
-			<generator class="native"></generator>
-		</id>
-		<property name="username" >
-			<column name="username" length="20" not-null="false" />
-		</property>
-		<property name="password" >
-			<column name="password" length="20" not-null="false" />
-		</property>
-		<property name="account">
-			<column name="account" not-null="false" />
-		</property>
-	</class>
->>>>>>> 20180829 commit;
 </hibernate-mapping>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.main;
 
 import java.io.File;
@@ -166,4 +165,3 @@ public class HibernateUtil {
 	}
 
 }
->>>>>>> 20180829 commit;

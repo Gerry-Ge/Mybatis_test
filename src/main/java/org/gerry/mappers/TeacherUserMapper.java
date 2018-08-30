@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.mappers;
 
 import java.util.List;
@@ -36,4 +35,3 @@ public interface TeacherUserMapper {
 
 	public void deleteTeacherUser(int teacherId,int userId) throws Exception;
 }
->>>>>>> 20180829 commit;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.services;
 
 import org.gerry.beans.UserBean;
@@ -64,4 +63,3 @@ public class SpringAopTest {
 		}
 	}
 }
->>>>>>> 20180829 commit;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.hibernateBeans;
 
 import javax.persistence.*;
@@ -82,4 +81,3 @@ public class Superman {
 	}
 
 }
->>>>>>> 20180829 commit;

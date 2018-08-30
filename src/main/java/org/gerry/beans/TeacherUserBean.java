@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.beans;
 
 import java.io.Serializable;
@@ -72,4 +71,3 @@ public class TeacherUserBean implements Serializable {
 	}
 
 }
->>>>>>> 20180829 commit;

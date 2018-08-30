@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.mybatisPagePlugin;
 
 import java.io.Serializable;
@@ -160,4 +159,3 @@ public class Page implements Serializable {
 	}
 
 }
->>>>>>> 20180829 commit;

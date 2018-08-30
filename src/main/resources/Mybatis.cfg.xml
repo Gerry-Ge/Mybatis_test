@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
@@ -40,9 +39,8 @@
 		<mapper resource="org/gerry/mappers/PostMapper.xml" />
 		<mapper resource="org/gerry/mappers/TeacherMapper.xml" />
 		<mapper resource="org/gerry/mappers/TeacherUserMapper.xml" />
-		<!-- <mapper class="org.gerry.mappers.PostMapper" />
-		<mapper class="org.gerry.mappers.UserMapper" />
-		<mapper resource="org/gerry/mappers" /> -->
+		<!-- <mapper class="org.gerry.mappers.PostMapper" /> <mapper class="org.gerry.mappers.UserMapper" 
+			/> <mapper resource="org/gerry/mappers" /> -->
 	</mappers>
 
 	<plugins>
@@ -51,59 +49,4 @@
 			<property name="pageSqlId" value="(.*)UserMapper.getUserListPage(.*)" />
 		</plugin>
 	</plugins>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
-<configuration>
-<!-- 配置节点顺序 
-properties?,settings?,typeAliases?,typeHandlers?,objectFactory?,objectWrapperFactory?,
-reflectorFactory?,plugins?,environments?,databaseIdProvider?,mappers? -->
-	<properties resource="Mybatis.properties" />
-
-	<typeAliases>
-		<!-- 1、各自设置别名 -->
-		<!-- <typeAliase type="org.gerry.beans.UserBean" alias="UserBean"/> -->
-		<!-- 2、自动扫描 将java的类型作为别名 -->
-		<package name="org.gerry.beans" />
-	</typeAliases>
-
-	<plugins>
-		<plugin interceptor="org.gerry.mybatisPagePlugin.PagePlugin">
-			<property name="dialect" value="mysql" />
-			<property name="pageSqlId" value="(.*)UserMapper.getUserListPage(.*)" />
-		</plugin>
-	</plugins>
-
-	<!-- 整合spring框架 将DataSource 交给Spring 管理 -->
-	<environments default="MySql_1">
-		<environment id="MySql_1">
-			<transactionManager type="JDBC" />
-			<dataSource type="POOLED">
-				<property name="driver" value="${jdbc.driver}" />
-				<property name="url" value="${jdbc.url}" />
-				<property name="username" value="${jdbc.username}" />
-				<property name="password" value="${jdbc.password}" />
-			</dataSource>
-		</environment>
-		<environment id="MySql_2">
-			<transactionManager type="JDBC" />
-			<dataSource type="POOLED">
-				<property name="driver" value="${jdbc.driver}" />
-				<property name="url" value="${jdbc2.url}" />
-				<property name="username" value="${jdbc.username}" />
-				<property name="password" value="${jdbc.password}" />
-			</dataSource>
-		</environment>
-	</environments>
-
-	<!-- 
-	<mappers>
-		<mapper resource="org/gerry/mappers/UserMapper.xml" />
-		<mapper resource="org/gerry/mappers/PostMapper.xml" />
-		<mapper resource="org/gerry/mappers/TeacherMapper.xml" />
-		<mapper resource="org/gerry/mappers/TeacherUserMapper.xml" />
-		 <mapper class="org.gerry.mappers.PostMapper" /> <mapper class="org.gerry.mappers.UserMapper" 
-			/> <mapper resource="org/gerry/mappers" /> 
-	</mappers>-->
->>>>>>> 20180829 commit;
 </configuration>

@@ -1,46 +1,25 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC
           "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
           "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<class name="org.gerry.hibernateBeans.Superman" table="SUPERMAN" discriminator-value="superman">
-<id name="superId">
-<generator class="native" />
-</id>
-<discriminator column="type" type="string" />
-<property name="name"  type="string"/>
-<property name="sex" type="integer"/>
+	<class name="org.gerry.hibernateBeans.Superman" table="SUPERMAN"
+		discriminator-value="superman">
+		<id name="superId">
+			<generator class="native" />
+		</id>
+		<discriminator column="type" type="string" />
+		<property name="name" type="string" />
+		<property name="sex" type="integer" />
 
-<subclass name="org.gerry.hibernateBeans.MarvelSuperMan" discriminator-value="marvel">
-<property name="nation"/>
-</subclass>
+		<subclass name="org.gerry.hibernateBeans.MarvelSuperMan"
+			discriminator-value="marvel">
+			<property name="nation" />
+		</subclass>
 
-<subclass name="org.gerry.hibernateBeans.ChineseSuperMan" discriminator-value="chinese">
-<property name="skills"/>
-</subclass>
-</class>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-mapping PUBLIC
-          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<hibernate-mapping>
-<class name="org.gerry.hibernateBeans.Superman" table="SUPERMAN" discriminator-value="superman">
-<id name="superId">
-<generator class="native" />
-</id>
-<discriminator column="type" type="string" />
-<property name="name"  type="string"/>
-<property name="sex" type="integer"/>
-
-<subclass name="org.gerry.hibernateBeans.MarvelSuperMan" discriminator-value="marvel">
-<property name="nation"/>
-</subclass>
-
-<subclass name="org.gerry.hibernateBeans.ChineseSuperMan" discriminator-value="chinese">
-<property name="skills"/>
-</subclass>
-</class>
->>>>>>> 20180829 commit;
+		<subclass name="org.gerry.hibernateBeans.ChineseSuperMan"
+			discriminator-value="chinese">
+			<property name="skills" />
+		</subclass>
+	</class>
 </hibernate-mapping>          

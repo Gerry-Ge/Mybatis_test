@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.main;
 
 import java.util.ArrayList;
@@ -162,4 +161,3 @@ public class test_mysql_hibernate {
 	}
 
 }
->>>>>>> 20180829 commit;

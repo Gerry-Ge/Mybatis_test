@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.springboot;
 
 import org.mybatis.spring.annotation.MapperScan;
@@ -32,4 +31,3 @@ public class SpringBootApplicationT {
 		SpringApplication.run(SpringBootApplicationT.class, args);
 	}
 }
->>>>>>> 20180829 commit;

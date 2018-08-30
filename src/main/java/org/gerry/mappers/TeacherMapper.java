@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.mappers;
 
 import org.gerry.beans.TeacherBean;
@@ -26,4 +25,3 @@ public interface TeacherMapper {
 	
 	public TeacherBean  selectTeacher(int teacher_id) throws Exception;
 }
->>>>>>> 20180829 commit;

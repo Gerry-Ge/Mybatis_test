@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.hibernateBeans;
 
 import java.util.List;
@@ -72,4 +71,3 @@ public class Depertment {
 	
 
 }
->>>>>>> 20180829 commit;

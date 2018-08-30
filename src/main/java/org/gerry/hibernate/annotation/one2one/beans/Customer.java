@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.hibernate.annotation.one2one.beans;
 
 import javax.persistence.*;
@@ -70,4 +69,3 @@ public class Customer {
 	}
 
 }
->>>>>>> 20180829 commit;

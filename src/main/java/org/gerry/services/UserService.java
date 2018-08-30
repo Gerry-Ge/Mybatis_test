@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.services;
 
 import java.util.List;
@@ -60,4 +59,3 @@ public class UserService {
 		}
 	}
 }
->>>>>>> 20180829 commit;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.customanno.annotations;
 
 import java.lang.annotation.Documented;
@@ -32,4 +31,3 @@ public @interface TestAnnotation {
 	
 	word hello() default word.hello;
 }
->>>>>>> 20180829 commit;

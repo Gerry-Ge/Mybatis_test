@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.beans;
 
 import java.io.Serializable;
@@ -128,4 +127,3 @@ public class TeacherBean implements Serializable{
 				+ ", age=" + age + ", sex=" + sex + "]";
 	}
 }
->>>>>>> 20180829 commit;

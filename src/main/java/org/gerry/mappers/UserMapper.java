@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.mappers;
 
 import java.io.Serializable;
@@ -82,4 +81,3 @@ public interface UserMapper extends Serializable {
 	public List<UserBean> getUserListPage(@Param("page") Page page) throws Exception;
 
 }
->>>>>>> 20180829 commit;

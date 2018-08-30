@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.main;
 
 import java.io.Reader;
@@ -158,4 +157,3 @@ public class test_mysql_mybatis {
 	}
 
 }
->>>>>>> 20180829 commit;

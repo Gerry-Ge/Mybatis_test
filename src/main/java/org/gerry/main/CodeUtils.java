@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.main;
 
 import java.io.File;
@@ -110,4 +109,3 @@ public class CodeUtils {
 		prt(loseRate+"--"+pinResult+"--"+loseResult);
 }
 }
->>>>>>> 20180829 commit;

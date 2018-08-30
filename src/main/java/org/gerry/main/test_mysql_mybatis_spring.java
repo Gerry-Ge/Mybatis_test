@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.main;
 
 import org.apache.commons.dbcp.BasicDataSource;
@@ -74,4 +73,3 @@ public class test_mysql_mybatis_spring extends Thread {
 
 	}
 }
->>>>>>> 20180829 commit;

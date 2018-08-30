@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.gerry.beans;
 
 import javax.persistence.Column;
@@ -76,4 +75,3 @@ public class HEmployee {
 		return "HEmployee [empId=" + empId + ", firstName=" + firstName + "]";
 	}
 }
->>>>>>> 20180829 commit;
