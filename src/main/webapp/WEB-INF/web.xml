@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd "
@@ -25,4 +26,33 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	
+=======
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd "
+	version="2.4">
+	
+	<welcome-file-list>
+	<welcome-file>index.jsp</welcome-file>
+	<welcome-file>/WEB-INF/view/HibernateWeb.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- jsp页面无法使用C标签的EL表达式解决方法二 替换web.xml的报文头 -->
+	<display-name>Archetype Created Web Application</display-name>
+
+	<!-- springMVC框架配置  -->
+	<servlet>
+		<servlet-name>springMVC</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:applicationContext-springMvc.xml</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>springMVC</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+>>>>>>> 20180829 commit;
 </web-app>

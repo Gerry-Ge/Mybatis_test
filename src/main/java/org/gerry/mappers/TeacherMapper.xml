@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.gerry.mappers.TeacherMapper">
@@ -21,4 +22,29 @@
 insert into teacher (name,age,sex) values(#{name},#{age},#{sex})
 </insert>
 
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.gerry.mappers.TeacherMapper">
+
+<resultMap id="teacher" type="org.gerry.beans.TeacherBean">
+<id property="teacherId" column="teacher_id" />
+<result property="name" column="name"/>
+<result property="age" column="age"/>
+<result property="sex" column="sex"/>
+</resultMap>
+
+<resultMap id="teacherUsers" type="org.gerry.beans.TeacherBean">
+<id property="teacherId" column="teacher_id" />
+<result property="name" column="name"/>
+<result property="age" column="age"/>
+<result property="sex" column="sex"/>
+<collection property="users" column="teacher_id" select="org.gerry.mapper.TeacherUserMapper.selectTeachersByUser"/>
+</resultMap>
+
+<insert id="insertTeacher" parameterType="TeacherBean" useGeneratedKeys="true" keyProperty="id">
+insert into teacher (name,age,sex) values(#{name},#{age},#{sex})
+</insert>
+
+>>>>>>> 20180829 commit;
 </mapper>
