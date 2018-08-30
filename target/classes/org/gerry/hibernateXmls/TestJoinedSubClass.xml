@@ -12,7 +12,24 @@
 		<property name="age" type="integer" />
 		<joined-subclass name="org.gerry.hibernateBeans.Student">
 			<key column="sId" />
-			<property name="school" type="string"/>
+			<property name="school" type="string" />
 		</joined-subclass>
 	</class>
-</hibernate-mapping>          
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<hibernate-mapping>
+		<class name="org.gerry.hibernateBeans.Person">
+			<id name="pId" type="integer">
+				<generator class="native" />
+			</id>
+			<property name="name" type="java.lang.String" />
+			<property name="sex" type="integer" />
+			<property name="age" type="integer" />
+			<joined-subclass name="org.gerry.hibernateBeans.Student">
+				<key column="sId" />
+				<property name="school" type="string" />
+			</joined-subclass>
+		</class>
+	</hibernate-mapping>          

@@ -83,15 +83,17 @@
 	<select id="selectUserPostTeacher" resultMap="userPostCollcetionMap"
 		parameterType="int">
 		select u.*,t.*,s.* from
-		userdb u left join teacheruser p on u.id=p.userid
+		userdb u left join teacheruser p
+		on u.id=p.userid
 		left join post s on
 		s.userid=u.id
-		left join teacher t on p.teacher_id=t.teacher_id
+		left join teacher t on
+		p.teacher_id=t.teacher_id
 		where u.id=#{id}
 	</select>
-	
+
 	<select id="getUserListPage" resultType="UserBean">
-	select * from userdb
+		select * from userdb
 	</select>
 </mapper>
 

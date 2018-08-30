@@ -8,10 +8,10 @@
 			<column name="id" />
 			<generator class="native"></generator>
 		</id>
-		<property name="username" >
+		<property name="username">
 			<column name="username" length="20" not-null="false" />
 		</property>
-		<property name="password" >
+		<property name="password">
 			<column name="password" length="20" not-null="false" />
 		</property>
 		<property name="account">
